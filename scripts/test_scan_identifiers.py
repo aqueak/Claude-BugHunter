@@ -70,6 +70,7 @@ def main():
         with open(loud, "w") as fh:
             fh.write("ACMECORP everywhere\n")
         assert mod.main([loud]) == 1, "expected case-insensitive hit"
+      
 
         # Test default tracked-path discovery; Git quotes non-ASCII by default.
         unicode_leak = os.path.join(tmp, "notes-café.md")
